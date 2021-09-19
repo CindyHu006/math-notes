@@ -1,0 +1,76 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+%\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+%\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=15mm,
+ }
+
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumerate}
+\usepackage{arcs}
+\usepackage{cancel}
+\usepackage{xfrac}
+
+%SetFonts
+
+%SetFonts
+
+\usepackage[inline]{asymptote}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+%\rhead{Teacher David @ 18601688612}
+\lhead{\leftmark}
+
+
+\title{Lecture Notes}
+\author{Cindy Hu}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+
+
+
+\section{Quadratic Equations}
+Given quadratic equation $ax^2+bx+c=0, a \ne 0, a, b, c \in \mathbb{R}$, we can solve it by the technique of \emph{Completing Square}: 
+\begin{align*}
+& ax^2+bx+c=0\\
+\Rightarrow \quad & x^2+\frac{b}{a}x+\frac{c}{a}=0\\
+\Rightarrow \quad & (x+\frac{b}{2a})^2-\frac{b^2}{4a^2}+\frac{c}{a}=0\\
+%\Rightarrow \quad & (x+\frac{b}{2a})^2=\frac{b^2}{4a^2}-\frac{c}{a}\\
+\Rightarrow \quad & (x+\frac{b}{2a})^2=\frac{b^2-4ac}{4a^2}\\
+\Rightarrow \quad & x+\frac{b}{2a}=\pm \frac{\sqrt{b^2-4ac}}{2a}\\
+\Rightarrow \quad & x=\frac{-b \pm \sqrt{b^2-4ac}}{2a}
+\end{align*}
+
+
+%\renewcommand{\labelenumii}{(\arabic{enumii})}
+
+
+%\begin{enumerate}
+%\renewcommand{\labelenumi}{1.\arabic{enumi}}
+
+%\item \label{rule:add} \emph{Addition Principle}. If there are $a$ varieties of soup and $b$ varieties of salad, then there are $a+b$ possible ways to order a meal of soup \emph{or} salad (but not both soup and salad). 
+
+%\end{enumerate}
+
+
+
+
+\end{document} 

@@ -110,7 +110,89 @@ To solve $3x^2 - 8x +4=0$, we then have $x-2=0$ or $3x-2=0$. The two roots are $
 
 Unfortunately, not every quadratic equation can be factorised in such a clean way. But if we do meet an equation which we find can be factorised, solving it by factorisation would save quite a bit of effort. 
 
+\subsection{the Relationship Between Roots and Coefficients}
 
+Given quadratic equation $ax^2+bx+c=0$, if there exits \hl{two roots $\alpha$ and $\beta$}, then the equation can be written in a factorized form as 
+\[a(x-\alpha)(x-\beta) = 0.\] 
+
+Expanding the above equation, we have 
+\[ax^2-a(\alpha+\beta)+a\alpha\beta=0.\]
+Comparing $ax^2-a(\alpha+\beta)+a\alpha\beta=0$ with $ax^2+bx+c=0$, we realise that 
+\[b=-a(\alpha+\beta)\quad  \text{ and } \quad c=a\alpha\beta.\] 
+We often write the above in a slightly different way 
+\[\alpha+\beta=-\frac{b}{a}, \quad  \text{ and } \quad \alpha\beta=\frac{c}{a},\] 
+which is also known as \hl{Vieta's Formula}. 
+
+\subsection{Quadratic Function} 
+Given quadratic function $f(x)=ax^2+bx+c, a\ne 0, a, b, c \in\mathbb{R}$, it's curve is a parabola in in a two-dimensional space. The value of $a$ determines which direction the parabola opens to. \hl{If $a>0$, the parabola opens upward, if $a<0$, the parabola opens downwards}. 
+
+\subsection{the Vertex Form} 
+
+Given the quadratic equation: 
+\begin{align*}
+f(x) &=ax^2+bx+c\\
+& =a\left(x^2+\frac{b}{a}\right)x+c\\
+& =a\left(x+\frac{b}{2a}\right)^2+c-\frac{b^2}{4a}\\
+& =a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a^2}\\
+\end{align*}
+
+\subsubsection{What does the vertex form disclose? }
+The vertex form discloses the following:
+\begin{enumerate}
+\item The curve of $f(x)$ is symmetric.
+
+\item The axis of symmetry is $x=-\frac{b}{2a}$. 
+
+\item \hl{The vertex of $f(x)$ is $(-\frac{b}{2a}, \frac{4ac-b^2}{4a})$. When $a>0$, $\frac{4ac-b^2}{4a}$ is the minima of $f
+(x)$; when $a<0$, $\frac{4ac-b^2}{4a}$ is the maxima. }
+
+\end{enumerate} 
+
+\subsection{Another Way to Solve Quadratic Equation}
+Given quadratic equation  $3x^2-6x-1=0$, solving the equation is equivalent to finding the intersection points of $f(x) =3x^2 -6x -1$ to the $x$-axis. If the intersections are $(x_1, 0)$ and $(x_2, 0)$, we can plot the parabola  of $f(x)$, as illustrated in Figure~\ref{fig:parabola}. The axis of symmetry is $x = -\frac{-6}{2\times 3} = 1$. 
+
+Assuming the distance between $x_1$ and $x_2$ is $2d$, then $x_1 = 1-d$ and $x_2 = 1+d$, apparently. $x_1$ and $x_2$ will be solved once we figure out the value of $d$. 
+
+By \emph{Vieta's Formula}, we have $x_1\cdot x_2 = \frac{-1}{3}$, which implies 
+\begin{align*}
+&(1-d)(1+d) = -\frac{1}{3}\\
+\Rightarrow \quad & 1-d^2 = -\frac{1}{3}\\
+\Rightarrow \quad & d^2 = \frac{4}{3}\\
+\Rightarrow \quad & d= \sqrt{\frac{4}{3}} = \frac{2}{3}\sqrt{3}
+\end{align*}
+
+Finally, we have
+\[x_1= 1-\frac{2}{3}\sqrt{3}, \quad x_2 = 1+\frac{2}{3}\sqrt{3}.\]
+
+\begin{figure}
+\centering 
+\begin{tikzpicture} [scale=0.7]
+
+\draw [blue, thick] (-0.5,2.75) parabola bend (1,-4) (2.5,2.75);
+\draw [->] (-1,0)--(3,0);
+\draw [->](0,-5)--(0,4);
+\draw [dashed] (1, 2.75) -- (1,-5);
+\draw (2.13,0) -- (2.13,0.3);
+\draw (-.13,0) -- (-.13,0.3);
+\draw [<-](-0.13,0.25) --(0.27,0.25);
+\draw [->](0.6,0.25) --(1,0.25);
+
+\draw [<-](1,0.25) --(1.4,0.25);
+\draw [->](1.73,0.25) --(2.13,0.25);
+
+\coordinate [label=above:$d$](d1) at (0.44,0.1);
+\coordinate [label=above:$d$](d2) at (1.56,0.1);
+
+\coordinate [label=below:{\tiny $x_1$}](x1) at (-0.4,0);
+\coordinate [label=below:{\tiny $x_2$}](x2) at (2.45,0);
+
+\coordinate [label=below:$x$](x) at (3,0);
+\coordinate [label=left:$y$](y) at (0,4);
+
+\end{tikzpicture}
+\caption{Parabola of $3x^2 - 6x -1$}
+\label{fig:parabola}
+\end{figure}
 
 
 %\renewcommand{\labelenumii}{(\arabic{enumii})}

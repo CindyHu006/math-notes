@@ -9,7 +9,8 @@
  a4paper,
  total={170mm,257mm},
  left=20mm,
- top=15mm,
+ top=20mm,
+ bottom=20mm,
  }
 
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
@@ -33,9 +34,10 @@
 \usepackage[inline]{asymptote}
 
 
+\newtheorem{theorem}{Theorem}
 \pagestyle{fancy}
 \fancyhf{}
-%\rhead{Teacher David @ 18601688612}
+\rhead{Cindy Hu}
 \lhead{\leftmark}
 
 
@@ -193,6 +195,46 @@ Finally, we have
 \caption{Parabola of $3x^2 - 6x -1$}
 \label{fig:parabola}
 \end{figure}
+
+\newpage
+\section{Symmetric Polynomial}
+A symmetric polynomial is a polynomial where if you switch any pair of variables, it remains the same. For example, $x^2+y^2+z^2$ is a symmetric polynomial, since switching any pair, say $x$ and $y$, the resulting polynomial $y^2+x^2+z^2$ is the same as the initial polynomial. Symmetric polynomials are closely related to Vieta's formula and Newton's identities. 
+
+
+\subsection{Elementary Symmetric Polynomial}
+\begin{theorem}
+Any symmetric polynomial can be presented by elementary symmetric polynomial. 
+\end{theorem}
+
+Elementary symmetric polynomials are the building blocks for all symmetric polynomials. There are $n$ different elementary symmetric polynomials for $n$ variables, \{$x_1,x_2,\dots ,x_n$\}, and we define them as \{$e_1, e_2, \dots ,e_n$\}: 
+\begin{align*}
+e_1 &=\sum_{1\le i\le n} x_i\\
+e_2 &=\sum_{1\le i< j\le n} x_i x_j\\
+\vdots\\
+e_n &=x_1 x_2 \cdots x_n\\
+\end{align*}
+ 
+For example, there are two variables $a$ and $b$. Their elementary symmetric polynomials are: 
+\begin{align*}
+e_1 &=a+b\\
+e_2 &=ab\\
+\end{align*}
+
+If there are three variables $a$, $b$, and $c$, their elementary symmetric polynomials are: 
+\begin{align*}
+e_1 &=a+b+c\\
+e_2 &=ab+bc+ca\\
+e_3 &=abc \\
+\end{align*}
+
+Given Symmetric Polynomial $a^2+b^2-3ab$, it can be presented as:
+\[a^2+b^2-3ab = a^2+b^2+2ab-5ab=(a+b)^2-5ab\]
+
+Given Symmetric Polynomial $\frac{1}{a^2}+\frac{1}{b^2}$, it can be presented as:
+\[\frac{1}{a^2}+\frac{1}{b^2}=\frac{a^2+b^2}{a^2 b^2}=\frac{(a+b)^2-2ab}{(ab)^2}\] 
+
+Given Symmetric Polynomial $\frac{1}{a^2}+\frac{1}{b^2}+\frac{1}{c^2}$, it can be presented as:
+\[\frac{1}{a^2}+\frac{1}{b^2}+\frac{1}{c^2}=\frac{a^2b^2+b^2c^2+c^2a^2}{a^2 b^2c^2}=\frac{(ab+bc+ca)^2-2abc(a+b+c)}{(abc)^2}\] 
 
 
 %\renewcommand{\labelenumii}{(\arabic{enumii})}

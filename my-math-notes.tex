@@ -277,6 +277,45 @@ Newton's Identity is very powerful, because it provides a convenient way to calc
 
 Given $\alpha$ and $\beta$ are roots of quadratic equation $3x^2-\sqrt{5}x-\sqrt{2}=0$, find $\alpha^4 + \beta^4$. 
 
+According to Vieta's formula, $\alpha+\beta = \frac{\sqrt{5}}{3}$, $\alpha \cdot \beta = -\frac{\sqrt{2}}{3}$. 
+Then, by using Newton's Identity, we can get: 
+\begin{align*} 
+P_1& = \alpha+\beta = \frac{\sqrt{5}}{3} \\
+P_2 &= \alpha^2 + \beta^2 = (\alpha+\beta)(\alpha+\beta) - 2\cdot \alpha\beta=\frac{5}{9}-2 \cdot \frac{-\sqrt{2}}{3}\\
+P_3 &= \alpha^3 + \beta^3 = (\alpha + \beta)\cdot P_2 -\alpha \beta \cdot P_1\\
+& = \frac{\sqrt{5}}{3} \cdot \frac{5+6\sqrt{2}}{9} - (-\frac{\sqrt{2}}{3}) \cdot \frac{\sqrt{5}}{3} = \frac{5\sqrt{5} + 6 \sqrt{10}}{27} +\frac{3\sqrt{10}}{27} = \frac{5\sqrt{5} + 9 \sqrt{10}}{27}\\
+P_4 & = \alpha^4+\beta^4 = (\alpha + \beta)\cdot P_3 -\alpha \beta \cdot P_2 \\
+&= \frac{\sqrt{5}}{3} \cdot \frac{5\sqrt{5}+9\sqrt{10}}{27} + \frac{\sqrt{2}}{3} \cdot \frac{5+6\sqrt{2}}{9} = \frac{25+45\sqrt{2}}{81} + \frac{(5 \sqrt{2} + 12) \cdot 3}{27 \cdot 3} = \frac{61+60\sqrt{2}}{81} 
+\end{align*}
+
+\newpage
+\subsubsection{Newton's Identity for 3 Variables} 
+For three variables, $x$, $y$, and $z$, Newton's Identity states that: 
+\begin{align*}
+P_0& = x^0 +y^0+z^0=3\\
+P_1 &= x+y+z \\
+P_2 &= x^2+y^2+z^2 \\
+P_3 &= x^3+y^3+z^3 = (x+y+z)(x^2+y^2+z^2 )-x(y^2+ z^2)-y(x^2 +z^2) - z(x^2+y^2)\\
+&= (x+y+z)(x^2+y^2+z^2)-xy(x+y) -xz(x+z) - yz(y+z)\\
+&= (x+y+z)(x^2+y^2+z^2)- (x+y+z)(xy+xz+yz) + 3 \cdot xyz \\
+&= (x+y+z) \cdot P_2 - (xy+xz+yz) \cdot P_1 + xyz \cdot P_0 \\
+\vdots\\
+P_n &= (x+y+z) \cdot P_{n-1} - (xy+xz+yz) \cdot P_{n-2} + xyz \cdot P_{n-3}
+\end{align*}
+Notice that $x+y+z$ is the first elementary symmetric polynomial of $x$, $y$, and $z$. Let 
+\[ e_1 = x+y+z, \quad e_2 = xy + xz + yz,\quad  e_3 = xyz,  \]
+we have 
+\[ P_n= e_1\cdot P_{n-1} -e_2 \cdot P_{n-2} + e_3 \cdot P_{n-3} .\] 
+Given cubic equation $5x^3+3x^2-4x+\sqrt{2}=0$ with 3 roots $a$, $b$, and $c$, find the value of $a^3+b^3+c^3$. 
+According to Vieta's Formula, 
+\[  a+b+c=-\frac{3}{5} , \quad ab + ac+bc= -\frac{4}{5}, \quad abc=-\frac{\sqrt{2}}{5} ,\] 
+and we have 
+\begin{align*}
+P_2 &= a^2+b^2+c^2= (a+b+c)^2-2(ab+ac+bc)= \left(-\frac{3}{5}\right)^2-2\left(-\frac{4}{5}\right)= \frac{49}{25}\\
+P_3 &= a^3+b^3+c^3 = (a+b+c)P_2 - (ab+ac+bc) P_1+abc P_0 \\
+&=  \left(-\frac{3}{5}\right)\cdot \frac{49}{25} -\left(-\frac{4}{5}\right) \cdot \left(-\frac{3}{5}\right) + 3\cdot  -\frac{\sqrt{2}}{5} = -\frac{3\sqrt{2}}{5}-\frac{207}{125}
+\end{align*}
+
 
 \newpage 
 \section{Miscellaneous} 

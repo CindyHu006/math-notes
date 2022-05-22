@@ -26,6 +26,7 @@
 \usepackage{xfrac}
 \usepackage{soul}
 \usepackage{tikz}
+\usepackage{amsthm}
 
 %SetFonts
 
@@ -316,6 +317,48 @@ P_3 &= a^3+b^3+c^3 = (a+b+c)P_2 - (ab+ac+bc) P_1+abc P_0 \\
 &=  \left(-\frac{3}{5}\right)\cdot \frac{49}{25} -\left(-\frac{4}{5}\right) \cdot \left(-\frac{3}{5}\right) + 3\cdot  -\frac{\sqrt{2}}{5} = -\frac{3\sqrt{2}}{5}-\frac{207}{125}
 \end{align*}
 
+\newpage 
+\section{Inequality} 
+
+\subsection{AM $\ge$ GM}
+In general, the arithmetic mean (AM) of a series of positive numbers is no less than the geometric mean (GM) of this series. Given $a_1, a_2, a_3, \cdots, a_n$, where $a_i \in \mathbb{R}^+$ , we have: 
+\[\frac{a_1 + a_2 + a_3 + \cdots + a_n}{n} \ge \sqrt[n]{a_1  a_2  a_3  \cdots  a_n}. \] 
+Specifically, when $n=2$, we have: 
+\[ \frac{a_1 + a_2}{2} \ge \sqrt{a_1  a_2}, \] 
+which can be easily proved by  
+\[a_1 + a_2 - 2 \sqrt{a_1 a_2} =  (\sqrt{a_1} - \sqrt{a_2})^2 \ge 0, \quad \Rightarrow \quad  \frac{a_1 + a_2}{2} \ge \sqrt{a_1  a_2} \] 
+
+\subsection{The Cauchy Inequality} 
+Given two series $a_1, a_2, a_3, \cdots, a_n$, and  $b_1, b_2, b_3, \cdots, b_n$, where $a_i, b_i \in \mathbb{R}$, we have: 
+\[ (a_1^2 + a_2^2 + \cdots + a_n^2)(b_1^2 + b_2^2 + \cdots + b_n^2) \ge (a_1b_1 + a_2b_2 + \cdots+ a_nb_n)^2. \] 
+The equality hold only when 
+\[ \frac{a_1}{b_1} = \frac{a_2}{b_2} = \cdots = \frac{a_n}{b_n} .\]
+
+\begin{proof}
+We show a simple proof of the Cauchy Inequality. 
+Suppose we have a series of quadratic equations, $a_1^2 x^2 - 2a_1 b_1 x + b_1^2 = 0, \quad$
+$a_2^2 x^2 - 2a_2b_2 x + b_2^2 = 0, \quad \cdots, \quad a_n^2 x^2 - 2a_n b_n x + b_n^2 = 0,$ and we combined them together to form a single equation:  
+\[ (a_1x - b_1)^2 + (a_2x - b_2)^2 + \cdots +  (a_nx - b_n)^2 = 0. \] 
+The above equation have one single root only if 
+\[ x= \frac{b_1}{a_1} = \frac{b_2}{a_2} = \cdots = \frac{b_n}{a_n} .\]
+
+Therefore, for the above equation, we have $\Delta \le 0$. Lets rearrange the above equation, 
+\[ (a_1^2 + a_2^2 + \cdots + a_n^2)x^2 - 2(a_1b_1+a_2b_2+\cdots+a_nb_n)x + (b_1^2+b_2^2+\cdots+b_n^2) = 0.\]
+This implies 
+\begin{align*}
+& \Delta = 4(a_1b_1+a_2b_2+\cdots+a_nb_n)^2 - 4 (a_1^2 + a_2^2 + \cdots + a_n^2) (b_1^2+b_2^2+\cdots+b_n^2) \le 0\\
+\Rightarrow \quad & (a_1^2 + a_2^2 + \cdots + a_n^2) (b_1^2+b_2^2+\cdots+b_n^2) \ge (a_1b_1+a_2b_2+\cdots+a_nb_n)^2
+\end{align*}
+\end{proof} 
+Let's use Cauchy Inequality to solve an interesting problem. Given $a, b, c \in \mathbb{R}$ and $a^2 + b^2 + c^2 = 4$, find the maximum value of $a + 2b + 3c$. Applying the Cauchy Inequality, 
+\[ (a^2 + b^2 + c^2)(1^2+2^2+3^2) \ge (1a + 2b + 3c)^2 \quad \Rightarrow \quad 56 \ge (1a + 2b + 3c)^2. \]
+Therefore, $a+2b+3c \le 2\sqrt{14}$. When $\frac{a}{1} = \frac{b}{2} = \frac{c}{3} = \frac{2}{\sqrt{14}}$, $a+2b+3c=$ 
+
+
+
+
+
+
 
 \newpage 
 \section{Miscellaneous} 
@@ -327,6 +370,8 @@ P_3 &= a^3+b^3+c^3 = (a+b+c)P_2 - (ab+ac+bc) P_1+abc P_0 \\
 \item $(a+b+c+d)^2=a^2+b^2+c^2+d^2+2(ab+ac+ad+bc+bd+cd)$
 \item \[\left(\sum^n_{i=1} a_i\right)^2=\sum^n_{i=1} a_i^2+\sum_{1 \le i \ne j \le n} 2a_i a_j \]
 \item \[\binom{n}{k}=\frac{n!}{k!(n-k)!}=\frac{n(n-1)\cdots(n-k+1)}{k!}\]
+\item $a^3 + b^3 = (a+b) (a^2-ab+b^2)$ 
+\item $a^3 - b^3 = (a-b) (a^2 + ab +b^2)$ 
 \end{enumerate}
 
 

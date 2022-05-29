@@ -352,8 +352,59 @@ This implies
 \end{proof} 
 Let's use Cauchy Inequality to solve an interesting problem. Given $a, b, c \in \mathbb{R}$ and $a^2 + b^2 + c^2 = 4$, find the maximum value of $a + 2b + 3c$. Applying the Cauchy Inequality, 
 \[ (a^2 + b^2 + c^2)(1^2+2^2+3^2) \ge (1a + 2b + 3c)^2 \quad \Rightarrow \quad 56 \ge (1a + 2b + 3c)^2. \]
-Therefore, $a+2b+3c \le 2\sqrt{14}$. When $\frac{a}{1} = \frac{b}{2} = \frac{c}{3} = \frac{2}{\sqrt{14}}$, $a+2b+3c=$ 
+Therefore, $a+2b+3c \le 2\sqrt{14}$. When $\frac{a}{1} = \frac{b}{2} = \frac{c}{3} = \frac{2}{\sqrt{14}}$, $a+2b+3c= \frac{2}{\sqrt{14}} + \frac{8}{\sqrt{14}} + \frac{18}{\sqrt{14}} = \frac{28 \sqrt{14}}{14} = 2 \sqrt{14}$. 
 
+
+\newpage 
+\section{Practice} 
+\begin{enumerate} 
+\setlength \itemsep{4em}
+\item Solve the following equation system: 
+\[   
+\begin{cases} 
+xy (x+y) = 6 \\
+x^3 + y^3 = -19 
+\end{cases}     
+ \]
+ 
+ \textbf{Solution}:  
+ Both equations involve symmetric polynomials, which means they can be represented by elementary symmetric polynomials. 
+Let $a=x+y$ and $b=xy$, we have 
+\[
+x^3 + y^3 = (x + y) (x^2 + y^2) - (x+y)xy = (x + y)  [(x + y)^2 - 2xy] - (x+y)xy = a (a^2 -2b) - ab = a^3 - 3ab,  
+\] 
+and the original equation system becomes 
+\[   
+\begin{cases} 
+ab = 6 \\
+a^3 - 3ab = -19 
+\end{cases}     
+ \]
+Solving the above equation system, we have $a=-1$ and $b=-6$. 
+And then we get the following equation system: 
+\[   
+\begin{cases} 
+x +y = -1 \\
+xy = -6 
+\end{cases}     
+ \]
+ which is equivalent to quadratic equation $t^2 + t -6 = 0$.  Solving the quadratic equation we get, $t_1 = 2$ and $t_2 = -3$. Since $x$ and $y$ are interchangeable, the solutions to the original equation system are $x = 2$, $y= -3$ or $x = -3$, $y= 2$. 
+ 
+ 
+ \item Given $a = \frac{1}{7 - \sqrt{47}}$ and $b$ is the opposite of the decimal part of $a$. Find the value of $a^3 + b^3 + 8ab$. 
+ 
+\textbf{Solution} \\
+Since $a = \frac{7 + \sqrt{47}}{2}$, we have $6 < a < 7$ and $a + b = 6$.  
+Therefore, $b = 6 - a = \frac{5 - \sqrt{47}}{2}$. 
+Given $a^3 + b^3 = (a + b) (a^2 + b^2) - (a+b)ab = 6  (6^2 - 2ab) - 6ab = 6^3 -18ab$, we have 
+\[
+a^3 + b^3 + 8ab = 6^3 -10ab = 216 - 10 \cdot \frac{7 + \sqrt{47}}{2} \cdot \frac{5 - \sqrt{47}}{2} = 216 + 30 + 5\sqrt{47} = 246 + 5\sqrt{47}. 
+\]
+
+\item Given $x=\frac{1-\sqrt{2022}}{2}$, find the value of $(4x^3-2025x-2022)^3$. 
+
+
+\end{enumerate} 
 
 
 

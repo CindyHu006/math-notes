@@ -27,7 +27,7 @@
 \usepackage{soul}
 \usepackage{tikz}
 \usepackage{amsthm}
-
+\usepackage{gensymb}
 %SetFonts
 
 %SetFonts
@@ -496,9 +496,9 @@ According to Vieta's formula, the sum of two roots of the equation is $-\frac{9}
 
 
 
-
+\newpage
 \section{Euclidean Geometry} 
-\subsection{parallel lines and angles} 
+\subsection{Parallel Lines and Angles} 
 \begin{center}
 \begin{asy}
 size(5cm); 
@@ -508,8 +508,71 @@ draw((0, -1)--(5, 4));
 label("$a$", (-1.3, 0));
 label("$b$", (-1.3, 3));
 label("$c$", (5, 4.3));
+draw(arc((4, 3), 0.5, 0, 45), blue);
+label("\small $1$", (4.8, 3.3), blue); 
+draw(arc((4, 3), 0.5, 180, 225), blue);
+label("\small $2$", (3.2, 2.7), blue); 
+draw(arc((1, 0), 0.5, 0, 45), blue);
+label("\small $3$", (1.8, 0.3), blue); 
+draw(arc((1, 0), 0.5, 180, 225), blue);
+label("\small $4$", (0.2, -0.3), blue); 
+draw(arc((4, 3), 0.4, 225, 360), red);
+label("\small $5$", (4.4, 2.4), red); 
 \end{asy}
 \end{center}
+
+\subsubsection{Opposite Angles}
+Opposite angles are congruent, and therefore $\angle 1 = \angle 2$, $\angle 3 = \angle 4$. 
+
+\subsubsection{Corresponding Angles}
+Given $a \parallel b$, and line $c$ intersects $a$ and $b$, $\angle 1$ and $\angle 3$ are called Corresponding Angles. Similarly, $\angle 2$ and $\angle 4$ are corresponding angles, too. Corresponding angles are congruent, and therefore  $\angle 1 = \angle 3$, $\angle 2 = \angle 4$. 
+
+\subsubsection{Alternate Interior Angles}
+Given $a \parallel b$, $\angle 2$ and $\angle 3$ are called Alternate interior angles. Alternate interior angles $\angle 2$ and $\angle 3$ are congruent, because $\angle 1 = \angle 2$ (opposite angles) and $\angle 1 = \angle 3$ (corresponding angles). 
+
+\subsubsection{Alternate Exterior Angles}
+Given $a \parallel b$, $\angle 1$ and $\angle 4$ are called Alternate exterior angles. Alternate exterior angles $\angle 1$ and $\angle 4$ are congruent, because $\angle 1 = \angle 2$ (opposite angles) and $\angle 2 = \angle 4$ (corresponding angles). 
+
+\subsubsection{Supplementary Angles}
+Given  $a \parallel b$, $\angle 3$ and $\angle 5$ are called Supplementary angles, which means $\angle 3 + \angle 5 = 180\degree$. Since $\angle 1 = \angle 3$ and $\angle 1 + \angle 5 = 180\degree$, it's obvious that $\angle 3 + \angle 5 = 180\degree$. 
+
+
+\subsection{Polygons} 
+\subsubsection{Triangles} 
+\begin{center}
+\begin{asy}
+size(5cm); 
+draw((0, 0)--(6, 0)--(4, 4)--cycle); 
+draw((6, 0)--(9, 0));
+draw((0, 4)--(8, 4));
+draw(arc((4, 4), 0.7, 180, 225), blue);
+draw(arc((0, 0), 0.7, 0, 45), blue);
+draw(arc((4, 4), 0.6, 0, -63), red);
+draw(arc((6, 0), 0.6, 180, 117), red);
+draw((8, 4)--(10, 4)--(6, 0), red+dashed); 
+draw((4, 4)--(4, 0), red+dashed); 
+label("\small{$1$}", (3.4, 4), SW); 
+label("\small{$2$}", (4.6, 4), SE); 
+label("$A$", (4, 4), N); 
+label("$B$", (0, 0), S); 
+label("$C$", (6, 0), S); 
+label("$D$", (9, 0), S); 
+label("$E$", (10, 4), N);
+label("$a$", (3, 0), S, blue); 
+label("$b$", (5, 2), NE, blue); 
+label("$c$", (2, 2), NW, blue); 
+label("$h$", (4, 2), W, red); 
+\end{asy}
+\end{center}
+For a triangle, there are four important properties: 
+\begin{enumerate} 
+\item The sum of three interior angles is $180\degree$. Let $l \parallel BC$, and $l$ passes through point $A$, then $\angle 1 = \angle B$, $\angle 2 = \angle ACB$. Therefore, the sum of three interior angles $\angle B + \angle BAC + \angle ACB = \angle 1 + \angle BAC + \angle 2 = 180\degree$. 
+\item The sum of any two edges is greater than the other edge. This is because the direct line segment between two points is the shortest. Therefore, $a < b+c$, $b< a+c$, $c < b+a$, and consequently $a > |b-c|$, $b > |a-c|$, $c > |b-a|$. 
+\item Any exterior angle equals to the sum of two non-adjacent interior angles. $\angle ACD$ is an exterior angle at $C$. Since $\angle ACD + \angle ACB = 180\degree$, and $\angle B + \angle BAC +\angle ACB = 180\degree$, we have $\angle ACD=\angle B + \angle BAC$. 
+\item The area of a triangle can be calculated by: $base \times height \div 2$. Extending $A$ to $E$ such that $AE \parallel BC$ and $AE = BC$, we have $AECB$ as a parallelogram and $\triangle ABC \cong \triangle CEA$. The area of $AECB$ is calculated by $base \times height = ah$. The parallelogram is consist of two identical triangles. Therefore, the area of the triangle ABC is $base \times height \div 2 = \frac{ah}{2}$. 
+\end{enumerate} 
+
+
 
 
 

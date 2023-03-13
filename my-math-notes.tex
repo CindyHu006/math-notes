@@ -663,13 +663,75 @@ label("$1$", (0, 0.5), W, green);
 draw((0, 0)--(sqrt(3)/2, 0.5), blue);
 label("$D$", (sqrt(3)/2, 0.5), NE, blue);
 draw(arc((sqrt(3)/2, 0.5), 0.1, 150, 210), blue);
-label("$60\degree$", (sqrt(3)/2-0.1, 0.5), W, blue);
+label("$60\degree$", (sqrt(3)/2-0.1, 0.5), W, blue); 
 \end{asy}
 \end{center}
 
 Given right triangle $\triangle ABC$, where $\angle C = 90\degree$, $\angle A = 60\degree$, and $AC = 1$, what is the length of $AB$? 
 Extending $CD$ to intersect $AB$ at point $D$ such that $\angle ADC = 60\degree$, we have equilateral $\triangle ACD$, and $AD = AC = DC = 1$. We also have $\angle DCB = 90\degree - \angle ACD = 30\degree = \angle DBC$, and thus $DC = DB = 1$. Therefore, $AB = AD + DB = 2$. 
 By Pythagorean Theorem, $BC^2 = AB^2 - AC^2 = 4-1 = 3$, $BC = \sqrt{3}$. 
+
+\subsection{Similar Triangle} 
+There are three ways to identify similar triangles: AAA, SSS, SAS. 
+\subsubsection{AAA} 
+Given $\triangle ABC$ and $\triangle DEF$, if $\angle A = \angle D$, $\angle B = \angle E$, and $\angle C = \angle F$, then $\triangle ABC \sim \triangle DEF$. For any two triangles, if they have two pairs of equal angles, they are similar triangles. 
+\subsubsection{SSS} 
+Given $\triangle ABC$ and $\triangle DEF$, if $\frac{AB}{DE} = \frac{BC}{EF} = \frac{AC}{DF}$, then $\triangle ABC \sim \triangle DEF$. 
+\subsubsection{SAS} 
+Given $\triangle ABC$ and $\triangle DEF$, if $\frac{AB}{DE} = \frac{BC}{EF}$ and $\angle B = \angle E$, then $\triangle ABC \sim \triangle DEF$. 
+
+\subsubsection{Similar Triangle Scenarios}
+There are two similar triangle scenarios, in the first scenario, there is a parallel line within a triangle, as illustrated in Figure \ref{fig.s1}.
+\begin{figure}[ht]
+\centering
+\begin{asy}
+size(4cm);
+pair a=(0, 3), b=(-1, 0), c=(1, 0), d=(-2/3, 1), e=(2/3, 1); 
+draw(a--b--c--cycle); 
+label("$A$", a, N); 
+label("$B$", b, W);
+label("$C$", c, E);  
+draw(d--e);
+label("$D$", d, W);
+label("$E$", e, E);  
+\end{asy}
+\caption{Similar Triangle: Scenario 1}
+\label{fig.s1}
+\end{figure}
+
+In this scenario, $\triangle ADE \sim \triangle ABC$, and therefore $$\frac{AD}{AB} = \frac{AE}{AC} = \frac{DE}{BC}, $$ or presented differently $$\frac{AD}{DE} = \frac{AB}{BC}, \quad\frac{AE}{DE} = \frac{AC}{BC}, \quad\frac{AD}{AE} = \frac{AB}{AC}.$$
+
+
+
+In the second scenario, two lines intersect between a pair of parallel lines, as illustrated in Figure \ref{fig.s2}. 
+\begin{figure}[ht]
+\centering
+\begin{asy}
+size(4cm);
+pair x1=(0, 0), x2=(4, 0), y1=(0, 3), y2=(4, 3); 
+draw(x1--x2); 
+draw(y1--y2); 
+pair a=(0.5, 3), b=(3.5, 3), c=(1, 0), d=(3, 0);
+draw(a--d); 
+draw(b--c); 
+label("$A$", a, N);
+label("$B$", b, N);
+label("$C$", c, S);
+label("$D$", d, S);
+label("$E$", (2, 1.2), W);
+\end{asy}
+\caption{Similar Triangle: Scenario 2}
+\label{fig.s2}
+\end{figure}
+
+In this scenario, $\triangle EAB \sim \triangle EDC,$ and therefore, $$\frac{EA}{ED} = \frac{EB}{EC} = \frac{AB}{DC}, $$ or presented differently $$\frac{EA}{EB} = \frac{EC}{ED}, \quad\frac{EA}{AB} = \frac{ED}{DC}, \quad\frac{EB}{BA} = \frac{EC}{CD}.$$
+
+
+
+
+
+
+
 
 
 
